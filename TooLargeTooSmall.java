@@ -1,9 +1,10 @@
 
 /**
- * Write a description of class TooLargeTooSmall here.
+ * Compares guess to seed.  If the guess is the same as the seed it returns a 0.  If it is less than the seed, 
+ * this it is -1.  If it is more than the seed, then it is 1.  
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Chris Farmer
+ * @version Version 1.1
  */
 public class TooLargeTooSmall {
     private Integer chosenNum;
@@ -17,8 +18,16 @@ public class TooLargeTooSmall {
     }
     
     public Integer guess(Integer g) {
+        if (g.compareTo(chosenNum) == 0){
+            return 0;
+        }
+        else if (g.compareTo(chosenNum) < 0) {
+            return -1;
+        }
+        else {
+            return 1;
+        }
         
-        return chosenNum;
 
     }
 }
